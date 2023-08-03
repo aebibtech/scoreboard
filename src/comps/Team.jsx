@@ -10,7 +10,7 @@ export default function Team({teamName}){
     return(
         <li className={liStyles}>
             <span className={nameStyles}>{teamName}</span>
-            <input className="w-[72px] ml-3 text-center mr-6 bg-transparent" type="number" min="0" value={score} />
+            <span className="inline-block w-[72px] ml-3 text-center mr-6 bg-transparent">{score}</span>
             <button className={scoreButtonStyles + " mr-3"} onClick={ () => setScore(() => score + 1) }>+</button> 
             <button className={scoreButtonStyles} onClick={ () => setScore(() => score > 1 ? score - 1 : 0) }>-</button>
         </li>
