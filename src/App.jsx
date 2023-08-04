@@ -49,7 +49,7 @@ function App() {
       </section>
       <section className="h-screen border-l border-black">
         <h2 className={headingStyles}>Timer</h2>
-        <iframe className="w-full h-[480px]" src="https://www.bigtimer.net/?minutes=2&repeat=false" frameborder="0" allowfullscreen></iframe>
+        <iframe className="w-full h-[517px]" src="https://www.bigtimer.net/?minutes=2&repeat=false" frameborder="0"></iframe>
       </section>
       <dialog open={willAddPlayer} className="h-[300px] w-[600px] fixed top-24 shadow-xl rounded p-6 border border-black">
           <h2 className="text-4xl">Add Player</h2>
