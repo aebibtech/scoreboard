@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Team from "./comps/Team"
+import Scoreboard from "./comps/Scoreboard"
 
 function App() {
   const [players, setPlayers] = useState([])
@@ -34,14 +34,16 @@ function App() {
     setPlayers(newPlayers)
   }
 
+  function removePlayer(id){
+    setPlayers(players.filter(player => player.id !== id))
+  }
+
   return (
     <main className="grid grid-cols-2 bg-slate-100">
       <section className="h-screen border-r border-black">
         <h2 className={headingStyles}>Scoreboard <button className="px-3 bg-green-700 text-white hover:opacity-90" onClick={() => setWillAddPlayer(true)}>+</button>{/* <button className="px-3 bg-red-700 text-white hover:opacity-90" onClick={() => setWillRemovePlayer(true)}>-</button> */}</h2>
         <ul className="p-6 overflow-y-auto">
-          {players.length > 0 ? players.map((player) => {
-            return <Team key={player.id} team={player} updateScore={updateScore} />
-          }) : <p className="text-center text-xl">No players yet. Add a player.</p>}
+          <Scoreboard players={players} updateScore={updateScore} removePlayer={removePlayer} />
         </ul>
       </section>
       <section className="h-screen border-l border-black">
