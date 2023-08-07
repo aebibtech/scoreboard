@@ -39,16 +39,16 @@ function App() {
   }
 
   return (
-    <main className="grid grid-cols-2 bg-slate-100">
-      <section className="h-screen border-r border-black">
+    <main className="h-screen grid grid-cols-2 bg-slate-100 overflow-hidden grid-flow-dense">
+      <section className="border-r border-black overflow-y-auto">
         <h2 className={headingStyles}>Scoreboard <button className="px-3 bg-green-700 text-white hover:opacity-90" onClick={() => setWillAddPlayer(true)}>+</button>{/* <button className="px-3 bg-red-700 text-white hover:opacity-90" onClick={() => setWillRemovePlayer(true)}>-</button> */}</h2>
-        <ul className="p-6 overflow-y-auto">
+        <ul className="p-6">
           <Scoreboard players={players} updateScore={updateScore} removePlayer={removePlayer} />
         </ul>
       </section>
-      <section className="h-screen border-l border-black">
+      <section className="border-l border-black">
         <h2 className={headingStyles}>Timer</h2>
-        <iframe className="w-full h-[517px]" src="https://www.bigtimer.net/?minutes=2&repeat=false" frameBorder="0"></iframe>
+        <iframe className="w-full h-full" src="https://www.bigtimer.net/?minutes=2&repeat=false" frameBorder="0"></iframe>
       </section>
       <dialog open={willAddPlayer} className="h-[300px] w-[600px] fixed top-24 shadow-xl rounded p-6 border border-black">
           <h2 className="text-4xl">Add Player</h2>
