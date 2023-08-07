@@ -1,8 +1,10 @@
-# React + Vite
+# Scoreboard app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a scoreboard + timer application developed with React. Currently available at ![https://sb.aebibtech.com](https://sb.aebibtech.com).
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running locally
+1. Make sure that you have Node.js installed on your machine.
+2. Clone this repository.
+3. Open a terminal/command prompt in the project path.
+4. Run `npm install` on the terminal.
+5. To run the project locally, run `npm run dev`.
