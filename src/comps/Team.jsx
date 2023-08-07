@@ -8,7 +8,7 @@ export default function Team({team, updateScore, removePlayer}){
     }, [score])
     
     const liStyles = "py-6 text-4xl"
-    const nameStyles = "inline-block w-[300px] font-semibold"
+    const nameStyles = "inline-block w-[300px] font-semibold overflow-hidden"
     const scoreButtonStyles = "border border-black px-3 hover:bg-black hover:text-white mr-3"
     const deleteButtonStyles = "border border-red-900 bg-red-900 px-3 hover:opacity-80"
 
