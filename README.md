@@ -1,6 +1,6 @@
 # Scoreboard app
 
-This is a scoreboard + timer application developed with React. Currently available at ![https://sb.aebibtech.com](https://sb.aebibtech.com).
+This is a scoreboard + timer application developed with React. Currently available at [https://sb.aebibtech.com](https://sb.aebibtech.com).
 
 ## Features
 - Scoreboard
