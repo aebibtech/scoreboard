@@ -2,6 +2,10 @@
 
 This is a scoreboard + timer application developed with React. Currently available at ![https://sb.aebibtech.com](https://sb.aebibtech.com).
 
+## Features
+- Scoreboard
+- Timer (from https://bigtimer.net)
+
 ## Running locally
 1. Make sure that you have Node.js installed on your machine.
 2. Clone this repository.
