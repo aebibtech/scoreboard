@@ -59,14 +59,14 @@ function App() {
   }
 
   return (
-    <main className="h-screen grid grid-cols-2 bg-slate-100 overflow-hidden grid-flow-dense" onKeyUp={handleKeys}>
+    <main className="h-screen grid sm:grid-cols-1 lg:grid-cols-2 bg-slate-100 lg:overflow-hidden grid-flow-dense" onKeyUp={handleKeys}>
       <section className="border-r border-black overflow-y-auto">
         <h2 className={headingStyles}>Scoreboard <button className="px-3 bg-green-700 text-white hover:opacity-90" onClick={() => setWillAddPlayer(true)}>+</button>{/* <button className="px-3 bg-red-700 text-white hover:opacity-90" onClick={() => setWillRemovePlayer(true)}>-</button> */}</h2>
         <ul className="p-6">
           <Scoreboard players={players} updateScore={updateScore} removePlayer={removePlayer} />
         </ul>
       </section>
-      <section className="border-l border-black">
+      <section className="border-l border-black border-t-2 lg:border-t-0">
         <h2 className={headingStyles}>Timer</h2>
         <iframe className="w-full h-full" src="https://www.bigtimer.net/?minutes=2&repeat=false" frameBorder="0"></iframe>
       </section>
