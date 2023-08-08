@@ -10,7 +10,10 @@ export default function Team({team, updateScore, removePlayer, updatePlayerName}
     }, [score])
 
     useEffect(() => {
-        updatePlayerName(name, team ? team.id : 0)
+        const result = updatePlayerName(name, team ? team.id : 0)
+        if(result !== true){
+            setName(result)
+        }
     }, [name])
 
     function handleNameChange(e){

@@ -7,7 +7,7 @@ function App() {
   const [addPlayerName, setAddPlayerName] = useState("")
   const nameRef = useRef()
   const headingStyles = "text-center text-6xl border-b-2 border-black p-8 drop-shadow-md"
-
+  
   useEffect(() => {
     if(willAddPlayer){
       nameRef.current.focus()
@@ -52,12 +52,18 @@ function App() {
 
   function updatePlayerName(name, id){
     const newPlayers = players.slice()
+    const playerArr = newPlayers.filter(player => player.name === name)
+    if(playerArr.length > 0){
+      const currentPlayerName = newPlayers.filter(player => player.id === id)[0].name
+      return currentPlayerName
+    }
     for(let ind = 0; ind < newPlayers.length; ind++){
       if(newPlayers[ind].id === id){
         newPlayers[ind].name = name
       }
     }
     setPlayers(newPlayers)
+    return true
   }
 
   function removePlayer(id){
