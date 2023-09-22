@@ -76,9 +76,9 @@ function App() {
         <h2 className={headingStyles}>Timer</h2>
         <iframe className="w-full h-full" src="https://www.bigtimer.net/?minutes=2&repeat=false" frameBorder="0"></iframe>
       </section>
-      <dialog ref={dialogRef} open={false} className="h-[300px] w-[600px] fixed top-24 shadow-xl rounded p-6 border border-black">
+      <dialog ref={dialogRef} open={false} className="h-[320px] w-[600px] fixed top-24 shadow-xl rounded p-6 border border-black">
           <h2 className="text-4xl">Add Player</h2>
-          <input type="text" className="block text-4xl border-b border-black my-12" ref={nameRef} value={addPlayerName} onChange={handleAddPlayerNameeChange} />
+          <input type="text" className="block text-4xl leading-relaxed border-b border-black my-12" ref={nameRef} value={addPlayerName} onChange={handleAddPlayerNameeChange} />
           <button className="px-6 py-3 bg-green-700 text-white hover:opacity-90 text-2xl rounded mr-3" onClick={handleAddPlayer}>Add</button>
           <button className="px-6 py-3 bg-red-700 text-white hover:opacity-90 text-2xl rounded" onClick={handleCancel}>Cancel</button>
       </dialog>
