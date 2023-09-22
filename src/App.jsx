@@ -67,7 +67,7 @@ function App() {
   return (
     <main className="h-screen grid sm:grid-cols-1 lg:grid-cols-2 bg-slate-100 lg:overflow-hidden grid-flow-dense" onKeyUp={handleKeys}>
       <section className="border-r border-black overflow-y-auto">
-        <h2 className={headingStyles}>Scoreboard <button className="px-3 bg-green-700 text-white hover:opacity-90" onClick={() => dialogRef.current.showModal()}>+</button></h2>
+        <h2 className={headingStyles}>Scoreboard <button className="px-3 bg-green-700 text-white hover:opacity-70 rounded" onClick={() => dialogRef.current.showModal()}>+</button></h2>
         <ul className="p-6">
           <Scoreboard players={players} updateScore={updateScore} removePlayer={removePlayer} updatePlayerName={updatePlayerName} />
         </ul>
@@ -78,9 +78,9 @@ function App() {
       </section>
       <dialog ref={dialogRef} open={false} className="h-[320px] w-[600px] fixed top-24 shadow-xl rounded p-6 border border-black">
           <h2 className="text-4xl">Add Player</h2>
-          <input type="text" className="block text-4xl leading-relaxed border-b border-black my-12" ref={nameRef} value={addPlayerName} onChange={handleAddPlayerNameeChange} />
-          <button className="px-6 py-3 bg-green-700 text-white hover:opacity-90 text-2xl rounded mr-3" onClick={handleAddPlayer}>Add</button>
-          <button className="px-6 py-3 bg-red-700 text-white hover:opacity-90 text-2xl rounded" onClick={handleCancel}>Cancel</button>
+          <input type="text" className="block text-4xl leading-relaxed border-b border-black my-12 w-full" ref={nameRef} value={addPlayerName} onChange={handleAddPlayerNameeChange} />
+          <button className="px-6 py-3 bg-green-700 text-white hover:opacity-70 text-2xl rounded mr-3" onClick={handleAddPlayer}>Add</button>
+          <button className="px-6 py-3 bg-red-700 text-white hover:opacity-70 text-2xl rounded" onClick={handleCancel}>Cancel</button>
       </dialog>
     </main>
   )

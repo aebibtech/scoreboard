@@ -30,8 +30,8 @@ export default function Team({team, updateScore, removePlayer, updatePlayerName}
     
     const liStyles = "py-6 text-4xl h-auto flex justify-between flex-wrap"
     const nameStyles = "inline-block w-[300px] leading-relaxed font-semibold overflow-hidden bg-transparent"
-    const scoreButtonStyles = "border border-black px-3 hover:bg-black hover:text-white mr-3"
-    const deleteButtonStyles = "border border-red-900 bg-red-900 px-3 hover:opacity-80"
+    const scoreButtonStyles = "px-3 bg-green-700 text-white hover:opacity-70 hover:text-white mr-3 rounded p-3 w-[72px]"
+    const deleteButtonStyles = "bg-red-900 px-3 hover:opacity-70 rounded p-3 w-[72px]"
 
     return(
         <li className={liStyles}>
@@ -40,7 +40,7 @@ export default function Team({team, updateScore, removePlayer, updatePlayerName}
             <span>
                 <span className="inline-block w-[72px] ml-3 text-center mr-6 bg-transparent">{score}</span>
                 <button className={scoreButtonStyles} onClick={ () => setScore(() => score + 1) }>+</button> 
-                <button className={scoreButtonStyles} onClick={ () => setScore(() => score > 1 ? score - 1 : 0) }>-</button>
+                <button className={scoreButtonStyles.replace("bg-green-700", "bg-gray-700")} onClick={ () => setScore(() => score > 1 ? score - 1 : 0) }>-</button>
                 <button className={deleteButtonStyles} onClick={() => { removePlayer(team.id) }}>&#128465;</button>
             </span>
         </li>
