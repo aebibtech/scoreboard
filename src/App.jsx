@@ -9,8 +9,8 @@ function App() {
   const headingStyles = "text-center text-6xl border-b-2 border-black p-8 drop-shadow-md"
 
   function handleAddPlayer(){
-    if(addPlayerName !== "" && players.filter((player) => player.name === addPlayerName).length === 0){
-      setPlayers([...players, {id: Math.floor(Math.random() * 9999) + 1000, name: addPlayerName, score: 0 }])
+    if(addPlayerName.trim() !== "" && players.filter((player) => player.name === addPlayerName).length === 0){
+      setPlayers([...players, {id: Math.floor(Math.random() * 9999) + 1000, name: addPlayerName.trim(), score: 0 }])
       dialogRef.current.close()
       setAddPlayerName("")
     }
